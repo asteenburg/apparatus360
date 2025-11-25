@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checklist Form</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-6">
+
+  <!-- Jumbotron -->
+  <section class="mb-8">
+    <div class="border border-gray-300 rounded-xl shadow-lg text-center py-32 px-6 max-w-3xl mx-auto bg-white">
+      <h1 class="text-7xl font-bold mb-6">Apparatus360</h1>
+      <p class="text-2xl text-gray-700">Managing and tracking equipment made easy</p>
+    </div>
+  </section>
+
+<!-- Checklist Form -->
+<section class="max-w-3xl mx-auto bg-white rounded-lg p-6 shadow-sm">
+
+  <!-- Header Row -->
+  <div class="flex items-center gap-3 py-2 border-b font-bold text-gray-700">
+    <span class="flex-1">Equipment</span>
+    <span class="w-32 text-right">Timestamp</span>
+  </div>
+
+  <form action="/submit" method="POST">
+
+    <!-- Rope Bags Row -->
+    <div class="flex items-center gap-3 py-2 border-b last:border-b-0">
+      <input type="checkbox" name="equipment[]" value="Rope Bags" id="rope" class="w-5 h-5 text-blue-600 rounded">
+      <label for="rope" class="text-gray-800 flex-1">Rope Bags</label>
+      <span id="rope-time" class="text-gray-600 text-sm w-32 text-right"></span>
+      <input type="hidden" name="rope-time" id="rope-time-input">
+    </div>
+
+    <!-- Accountability Kit Row -->
+    <div class="flex items-center gap-3 py-2 border-b last:border-b-0">
+      <input type="checkbox" name="equipment[]" value="Accountability Kit" id="account" class="w-5 h-5 text-blue-600 rounded">
+      <label for="account" class="text-gray-800 flex-1">Accountability Kit</label>
+      <span id="account-time" class="text-gray-600 text-sm w-32 text-right"></span>
+      <input type="hidden" name="account-time" id="account-time-input">
+    </div>
+
+    <!-- Add more rows here -->
+
+    <button type="submit" class="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+      Submit
+    </button>
+
+  </form>
+</section>
+
+<script>
+  function timeStamp() {
+    const date = new Date();
+    const month = String(date.getMonth() + 1).padStart(2,'0');
+    const day = String(date.getDate()).padStart(2,'0');
+    const year = date.getFullYear();
+    const hour = String(date.getHours()).padStart(2,'0');
+    const min = String(date.getMinutes()).padStart(2,'0');
+    const sec = String(date.getSeconds()).padStart(2,'0');
+    return `${month}/${day}/${year} • ${hour}:${min}:${sec}`;
+  }
+
+  const items = [
+    { checkbox: 'rope', span: 'rope-time', hidden: 'rope-time-input' },
+    { checkbox: 'account', span: 'account-time', hidden: 'account-time-input' },
+  ];
+
+  items.forEach(item => {
+    const cb = document.getElementById(item.checkbox);
+    const sp = document.getElementById(item.span);
+    const hi = document.getElementById(item.hidden);
+
+    cb.addEventListener('change', () => {
+      if (cb.checked) {
+        const ts = timeStamp();
+        sp.textContent = ts;
+        hi.value = ts;
+      } else {
+        sp.textContent = '';
+        hi.value = '';
+      }
+    });
+  });
+</script>
+</body>
+</html>

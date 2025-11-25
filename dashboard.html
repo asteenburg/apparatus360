@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Truck Inspections</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    <script src="https://kit.fontawesome.com/1c8d5e03c9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-gray-100 font-sans p-6">
+
+    <!-- Navigation placeholder -->
+    <div id="nav-placeholder" class="mb-4"></div>
+
+    <div class="container mx-auto px-4 py-6">
+        <h1 class="text-2xl font-bold mb-4">Truck Inspection Dashboard</h1>
+
+        <!-- Summary Table -->
+        <div id="summary-table-container" class="bg-white p-4 rounded shadow mb-4 overflow-x-auto">
+            <table class="min-w-full border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border px-4 py-2 text-left">Truck</th>
+                        <th class="border px-4 py-2 text-left">OK</th>
+                        <th class="border px-4 py-2 text-left">Defect</th>
+                        <th class="border px-4 py-2 text-left">Date/Time</th>
+                    </tr>
+                </thead>
+                <tbody id="summary-table-body"></tbody>
+                <tfoot>
+                    <tr class="bg-gray-100 font-bold">
+                        <td class="border px-4 py-2">Total</td>
+                        <td class="border px-4 py-2" id="total-ok">0</td>
+                        <td class="border px-4 py-2" id="total-defects">0</td>
+                        <td class="border px-4 py-2"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Chart container -->
+        <div class="bg-white p-4 rounded shadow mb-4">
+            <canvas id="inspectionChart" width="400" height="200"></canvas>
+        </div>
+
+        <!-- Fallback message -->
+        <div id="no-data-message" class="text-gray-600 italic"></div>
+    </div>
+
+
+    <script src="js/dashboard.js"></script>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>

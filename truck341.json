@@ -1,0 +1,46 @@
+{
+	"sections": [
+		{
+			"title": "Driver Side",
+			"items": []
+		},
+		{
+			"title": "Compartment 1",
+			"items": [
+				"Rope Bags",
+				"Life Safety Rope x4",
+				"Utility Rope x2",
+				"Harnesses x4",
+				"Tool Box"
+			]
+		},
+		{
+			"title": "Compartment 2",
+			"items": ["Accountability Board", "RIT Pack"]
+		},
+		{
+			"title": "Compartment 3",
+			"items": ["Spare Bottles", "Irons", "Spare Airpack", "Light Tower"]
+		},
+		{
+			"title": "Passenger Side",
+			"items": []
+		},
+		{
+			"title": "Compartment 1",
+			"items": [
+				"K12 Saw",
+				"Saw Blades",
+				"Chainsaw",
+				"Chain Lube",
+				"Spare Mixed Fuel",
+				"Chaps & Gloves",
+				"Salvage Covers",
+				"Salvage Equipment",
+				"Smoke Ejector",
+				"Honda Generator",
+				""
+			]
+		}
+	]
+}

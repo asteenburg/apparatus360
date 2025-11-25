@@ -1,0 +1,16 @@
+{
+	"sections": [
+		{
+			"title": "Driver Side",
+			"items": []
+		},
+		{
+			"title": "Compartment 1",
+			"items": ["AED", "First Aid Kit", "Fire Extinguisher"]
+		},
+		{
+			"title": "Rear Compartment",
+			"items": ["Charlie Lines x2", "Cones", "Hydrant Bag", "Oclansorbe"]
+		}
+	]
+}

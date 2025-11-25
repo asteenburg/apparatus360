@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apparatus360</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    <script src="https://kit.fontawesome.com/1c8d5e03c9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="app-styles.css">
+</head>
+
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- 
+        Updated:
+        - fixed: Fixes the position relative to the viewport.
+        - top-0, left-0, right-0: Ensures it spans the full top width.
+        - z-20: Puts it on top of the hero section's content (z-10).
+    -->
+    <div id="nav-placeholder" class="fixed top-0 left-0 right-0 z-20"></div>
+
+    <section class="relative bg-cover bg-center h-screen flex items-center justify-center text-white"
+        style="background-image: url('pexels-thatguycraig000-1588067.jpg');">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+            <h1 class="text-7xl font-extrabold uppercase mb-4 leading-tight">
+                Apparatus<span class="text-red-500">360</span>
+            </h1>
+            <p class="text-2xl mb-8 font-light max-w-2xl mx-auto">
+                Your comprehensive solution for precision truck inspections and fleet management.
+                Streamline operations, ensure safety, and gain insights with ease.
+            </p>
+            <a href="hub.html"
+                class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-xl font-medium rounded-full shadow-lg text-white bg-red-600 hover:bg-red-700 transition duration-300 transform hover:scale-105 active:scale-95 animate-bounce-slow">
+                <i class="fa-solid fa-arrow-right-to-bracket mr-3"></i>
+                Get Started
+            </a>
+        </div>
+    </section>
+
+    <!--<div id="footer-placeholder"></div>-->
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

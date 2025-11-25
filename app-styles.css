@@ -1,0 +1,64 @@
+/* Section fade-in */
+.fade-in {
+	opacity: 0;
+	transform: translateY(10px);
+	animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Checkbox pop animation */
+input[type="checkbox"]:checked {
+	animation: pop 0.15s ease-out;
+}
+
+@keyframes pop {
+	0% {
+		transform: scale(0.8);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* Button hover scale */
+.btn-hover {
+	transition: transform 0.2s;
+}
+
+.btn-hover:hover {
+	transform: scale(1.05);
+}
+/* Custom styles for visual polish */
+.card-glow {
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-glow:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15),
+		0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.checklist-item {
+	transition: background-color 0.2s;
+}
+
+.checklist-item:hover {
+	background-color: #f3f4f6;
+}
+
+.checklist-item:has(input[type="checkbox"]:checked) {
+	background-color: #d1fae5;
+	/* Light green for checked items */
+	border-left: 4px solid #10b981;
+	/* Green line indicator */
+}
