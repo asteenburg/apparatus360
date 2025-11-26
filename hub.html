@@ -5,73 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apparatus360 - Inspection Hub</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
     <script src="https://kit.fontawesome.com/1c8d5e03c9.js" crossorigin="anonymous"></script>
-    <!-- 1. AOS CSS Link -->
+
+    <!-- AOS Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-50 min-h-screen p-6 flex flex-col">
+<body class="bg-gray-50 min-h-screen flex flex-col p-4 sm:p-6">
 
     <!-- Navbar Placeholder -->
     <div id="nav-placeholder"></div>
 
-    <main class="py-12 flex-grow">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <main class="py-8 sm:py-12 flex-grow">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
 
-            <!-- Header Section -->
-            <header class="bg-white shadow-xl rounded-2xl p-8 mb-12">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="text-left md:w-3/4">
-                        <h1 class="text-6xl font-extrabold uppercase mb-2 text-gray-900">
-                            <i class="fa-solid fa-cubes pr-3"></i> Inspection Hub
+            <!-- HEADER -->
+            <header class="bg-white shadow-xl rounded-2xl p-6 sm:p-8 mb-10">
+
+                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6">
+
+                    <!-- LEFT TEXT -->
+                    <div class="text-left flex-1">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase text-gray-900 leading-tight">
+                            <i class="fa-solid fa-cubes pr-3"></i>
+                            Inspection Hub
                         </h1>
-                        <p class="text-xl text-gray-600 mt-2">
-                            Welcome to the Apparatus360 control center. Start a new inspection or review recent
-                            activity.
+
+                        <p class="text-lg sm:text-xl text-gray-600 mt-3">
+                            Welcome to the Apparatus360 control center. Start a new inspection or review recent activity.
                         </p>
                     </div>
-                    <div class="mt-6 md:mt-0 md:w-1/4 flex justify-end">
+
+                    <!-- BUTTON -->
+                    <div class="flex justify-start lg:justify-end">
                         <a href="checklist.html"
-                            class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-lg font-medium rounded-full shadow-lg text-white bg-red-600 hover:bg-red-500 transition duration-300 transform hover:scale-105 active:scale-95">
+                            class="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 
+                                   text-base sm:text-lg font-medium rounded-full shadow-lg text-white 
+                                   bg-red-600 hover:bg-red-500 transition duration-300 transform hover:scale-105 active:scale-95">
                             <i class="fa-solid fa-file-signature mr-3"></i>
                             Start New Checklist
                         </a>
                     </div>
+
                 </div>
             </header>
 
-            <!-- Dashboard Content Area -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- MAIN CONTENT GRID -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
 
-                <!-- Left Column (Activity Feed) - AOS Applied Here -->
+                <!-- LEFT COLUMN – ACTIVITY FEED -->
                 <div class="lg:col-span-2" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="bg-white shadow-lg rounded-xl p-6">
-                        <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b pb-2">
+
+                    <div class="bg-white shadow-lg rounded-xl p-5 sm:p-6">
+
+                        <h2 class="text-xl sm:text-2xl font-bold mb-4 text-gray-800 border-b pb-2">
                             <i class="fa-solid fa-clock-rotate-left mr-2 text-red-500"></i>
                             Recent Inspection History
                         </h2>
 
-                        <!-- Placeholder for Recent Inspections -->
+                        <!-- LIST -->
                         <ul id="recent-inspections-list" class="space-y-4">
-                            <li
-                                class="p-4 bg-gray-50 rounded-lg border border-gray-200 flex justify-between items-center">
+                            <li class="p-4 bg-gray-50 rounded-lg border border-gray-200 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                                 <p class="text-gray-700 font-medium">Truck 341 Inspection</p>
                                 <span class="text-sm text-green-600 font-semibold">Completed 1h ago</span>
                             </li>
-                            <li
-                                class="p-4 bg-gray-50 rounded-lg border border-gray-200 flex justify-between items-center">
+
+                            <li class="p-4 bg-gray-50 rounded-lg border border-gray-200 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                                 <p class="text-gray-700 font-medium">Truck 342 Inspection</p>
                                 <span class="text-sm text-yellow-600 font-semibold">Pending Review</span>
                             </li>
-                            <li
-                                class="p-4 bg-gray-50 rounded-lg border border-gray-200 flex justify-between items-center">
+
+                            <li class="p-4 bg-gray-50 rounded-lg border border-gray-200 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                                 <p class="text-gray-700 font-medium">Truck 344 Inspection</p>
                                 <span class="text-sm text-red-600 font-semibold">Defects Found</span>
                             </li>
-                            <li
-                                class="p-4 bg-gray-50 rounded-lg border border-gray-200 flex justify-between items-center">
+
+                            <li class="p-4 bg-gray-50 rounded-lg border border-gray-200">
                                 <p class="text-gray-700 italic">No further inspections recorded yet.</p>
                             </li>
                         </ul>
@@ -81,61 +93,76 @@
                             View All Reports
                         </button>
                     </div>
+
                 </div>
 
-                <!-- Right Column (Stats/Quick Links) -->
-                <div data-aos="fade-left" data-aos-duration="1000">
-                    <div class="bg-white shadow-lg rounded-xl p-6 mb-8">
-                        <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b pb-2">
+                <!-- RIGHT COLUMN – STATS + QUICK LINKS -->
+                <div class="space-y-6" data-aos="fade-left" data-aos-duration="1000">
+
+                    <!-- STATS BOX -->
+                    <div class="bg-white shadow-lg rounded-xl p-5 sm:p-6">
+                        <h2 class="text-xl sm:text-2xl font-bold mb-4 text-gray-800 border-b pb-2">
                             <i class="fa-solid fa-chart-line mr-2 text-blue-500"></i>
                             Fleet Performance Stats
                         </h2>
+
                         <div class="space-y-3">
+
                             <div class="bg-blue-50 p-3 rounded-lg flex justify-between">
                                 <span class="text-blue-700">Total Trucks:</span>
                                 <span class="font-bold text-blue-900">12</span>
                             </div>
+
                             <div class="bg-green-50 p-3 rounded-lg flex justify-between">
                                 <span class="text-green-700">Inspections Today:</span>
                                 <span class="font-bold text-green-900">3</span>
                             </div>
+
                             <div class="bg-red-50 p-3 rounded-lg flex justify-between">
                                 <span class="text-red-700">Defective Vehicles:</span>
                                 <span class="font-bold text-red-900">1</span>
                             </div>
+
                         </div>
                     </div>
 
-                    <div class="bg-white shadow-lg rounded-xl p-6">
-                        <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b pb-2">
+                    <!-- QUICK ACCESS -->
+                    <div class="bg-white shadow-lg rounded-xl p-5 sm:p-6">
+                        <h2 class="text-xl sm:text-2xl font-bold mb-4 text-gray-800 border-b pb-2">
                             <i class="fa-solid fa-link mr-2 text-gray-500"></i>
                             Quick Access Tools
                         </h2>
+
                         <ul class="space-y-3">
-                            <li><a href="#" class="text-blue-600 hover:text-blue-800 transition block">Truck Maintenance
-                                    Schedule</a></li>
-                            <li><a href="#" class="text-blue-600 hover:text-blue-800 transition block">Inspector
-                                    Directory</a></li>
+                            <li>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 transition block">
+                                    Truck Maintenance Schedule
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 transition block">
+                                    Inspector Directory
+                                </a>
+                            </li>
                         </ul>
+
                     </div>
                 </div>
 
             </div>
+
         </div>
     </main>
 
-    <!-- Footer placeholder -->
+    <!-- Footer -->
     <div id="footer-placeholder"></div>
 
-    <!-- 2. AOS JS Link -->
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- 3. AOS Initialization -->
-    <script>
-        AOS.init({
-            once: true, // Only animate once
-        });
-    </script>
-    <script src="js/app.js"></script>
-</body>
+    <script>AOS.init({ once: true });</script>
 
+    <script src="js/app.js"></script>
+
+</body>
 </html>
