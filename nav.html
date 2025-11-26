@@ -1,107 +1,66 @@
 <nav
-    class="relative mb-12 bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10 
-           rounded-xl shadow-lg w-full max-w-full overflow-hidden">
+    class="relative mb-12 bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px 
+           after:bg-white/10 rounded-xl shadow-lg w-full max-w-full overflow-hidden">
 
-    <div class="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl px-4">
 
-        <!-- NAVBAR ROW -->
-        <div class="flex h-16 items-center justify-between w-full">
+        <!-- NAVBAR -->
+        <div class="flex h-14 items-center justify-between">
 
-            <!-- MOBILE MENU BUTTON -->
-            <div class="flex items-center sm:hidden">
-                <button type="button" command="--toggle" commandfor="mobile-menu"
-                    class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white">
-                    <span class="sr-only">Open main menu</span>
-                    <i class="fa-solid fa-bars text-red-500 text-xl"></i>
-                </button>
-            </div>
+            <!-- LEFT SIDE (EMPTY to keep center alignment perfect) -->
+            <div class="w-12"></div>
 
-            <!-- LEFT SECTION -->
-            <div class="flex flex-1 items-center justify-center sm:justify-start">
+            <!-- CENTERED ICONS -->
+            <div class="flex items-center space-x-6 mx-auto">
 
-                <!-- DESKTOP LINKS -->
-                <div class="hidden sm:block sm:ml-6">
-                    <div class="flex space-x-4">
+                <a href="index.html"
+                    class="rounded-md p-2 text-gray-300 hover:text-white hover:bg-white/5 transition">
+                    <i class="fa-solid fa-house text-2xl"></i>
+                </a>
 
-                        <a href="index.html"
-                            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
-                            <i class="fa-solid fa-house text-2xl"></i>
-                        </a>
+                <a href="checklist.html"
+                    class="rounded-md p-2 text-gray-300 hover:text-white hover:bg-white/5 transition">
+                    <i class="fa-solid fa-list-check text-2xl"></i>
+                </a>
 
-                        <a href="checklist.html"
-                            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
-                            <i class="fa-solid fa-list-check text-2xl"></i>
-                        </a>
-
-                        <a href="dashboard.html"
-                            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-white">
-                            <i class="fa-solid fa-chart-line text-2xl"></i>
-                        </a>
-
-                    </div>
-                </div>
+                <a href="dashboard.html"
+                    class="rounded-md p-2 text-gray-300 hover:text-white hover:bg-white/5 transition">
+                    <i class="fa-solid fa-chart-line text-2xl"></i>
+                </a>
 
             </div>
 
-            <!-- RIGHT SECTION -->
+            <!-- RIGHT SIDE -->
             <div class="flex items-center space-x-4">
 
-                <!-- NOTIFICATIONS -->
-                <button type="button"
-                    class="rounded-full p-1 text-gray-400 hover:text-white focus:outline-none">
-                    <span class="sr-only">View notifications</span>
+                <!-- Notifications -->
+                <button class="text-gray-400 hover:text-white transition p-1">
                     <i class="fa-regular fa-bell text-xl"></i>
                 </button>
 
                 <!-- USER MENU -->
                 <div class="relative">
-
-                    <button id="user-menu-button" type="button"
-                        class="flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2"
+                    <button id="user-menu-button"
+                        class="flex rounded-full focus-visible:outline-none"
                         aria-expanded="false">
-                        <span class="sr-only">Open user menu</span>
 
                         <img src="IMG_2038.jpg" alt="User avatar"
-                            class="size-8 rounded-full bg-gray-800 outline outline-white/10 -outline-offset-1" />
+                            class="size-8 rounded-full outline outline-white/10 -outline-offset-1" />
                     </button>
 
                     <div id="user-menu"
-                        class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-800 py-1 shadow-lg ring-1 ring-white/10 
-                               opacity-0 scale-95 pointer-events-none transition duration-100 ease-out">
+                        class="absolute right-0 z-20 mt-2 w-48 origin-top-right rounded-md bg-gray-800 py-1 shadow-lg 
+                               ring-1 ring-white/10 opacity-0 scale-95 pointer-events-none transition duration-100">
 
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5">Your profile</a>
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5">Settings</a>
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5">Sign out</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5">Your profile</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5">Settings</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5">Sign out</a>
 
                     </div>
                 </div>
-
             </div>
         </div>
+
     </div>
 
-    <!-- MOBILE MENU -->
-    <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
-        <div class="space-y-1 px-3 pt-3 pb-4">
-
-            <a href="index.html"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white block">
-                Home
-            </a>
-
-            <a href="checklist.html"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white block">
-                Checklist
-            </a>
-
-            <a href="dashboard.html"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 block">
-                Dashboard
-            </a>
-
-        </div>
-    </el-disclosure>
 </nav>
