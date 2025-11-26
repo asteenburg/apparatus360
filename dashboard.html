@@ -13,48 +13,51 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="bg-gray-100 font-sans p-6">
+<body class="bg-gray-100 font-sans p-4 sm:p-6 md:p-6">
 
     <!-- Navigation placeholder -->
     <div id="nav-placeholder" class="mb-4"></div>
 
-    <div class="container mx-auto px-4 py-6">
-        <h1 class="text-2xl font-bold mb-4">Truck Inspection Dashboard</h1>
+    <div class="container mx-auto px-2 sm:px-4 py-4 sm:py-6 md:px-6 md:py-6">
 
-        <!-- Summary Table -->
-        <div id="summary-table-container" class="bg-white p-4 rounded shadow mb-4 overflow-x-auto">
+        <!-- Page Title -->
+        <h1 class="text-xl sm:text-2xl md:text-2xl font-bold mb-4">Truck Inspection Dashboard</h1>
+
+        <!-- Summary Table (scrollable on mobile) -->
+        <div id="summary-table-container" class="bg-white p-2 sm:p-4 rounded shadow mb-4 overflow-x-auto">
             <table class="min-w-full border border-gray-300">
                 <thead>
-                    <tr class="bg-gray-200">
-                        <th class="border px-4 py-2 text-left">Truck</th>
-                        <th class="border px-4 py-2 text-left">OK</th>
-                        <th class="border px-4 py-2 text-left">Defect</th>
-                        <th class="border px-4 py-2 text-left">Date/Time</th>
+                    <tr class="bg-gray-200 text-sm sm:text-base">
+                        <th class="border px-2 sm:px-4 py-2 text-left">Truck</th>
+                        <th class="border px-2 sm:px-4 py-2 text-left">OK</th>
+                        <th class="border px-2 sm:px-4 py-2 text-left">Defect</th>
+                        <th class="border px-2 sm:px-4 py-2 text-left">Date/Time</th>
                     </tr>
                 </thead>
-                <tbody id="summary-table-body"></tbody>
+                <tbody id="summary-table-body" class="text-sm sm:text-base"></tbody>
                 <tfoot>
-                    <tr class="bg-gray-100 font-bold">
-                        <td class="border px-4 py-2">Total</td>
-                        <td class="border px-4 py-2" id="total-ok">0</td>
-                        <td class="border px-4 py-2" id="total-defects">0</td>
-                        <td class="border px-4 py-2"></td>
+                    <tr class="bg-gray-100 font-bold text-sm sm:text-base">
+                        <td class="border px-2 sm:px-4 py-2">Total</td>
+                        <td class="border px-2 sm:px-4 py-2" id="total-ok">0</td>
+                        <td class="border px-2 sm:px-4 py-2" id="total-defects">0</td>
+                        <td class="border px-2 sm:px-4 py-2"></td>
                     </tr>
                 </tfoot>
             </table>
         </div>
 
         <!-- Chart container -->
-        <div class="bg-white p-4 rounded shadow mb-4">
-            <canvas id="inspectionChart" width="400" height="200"></canvas>
+        <div class="bg-white p-3 sm:p-4 rounded shadow mb-4 overflow-x-auto">
+            <canvas id="inspectionChart" class="w-full h-60 sm:h-80 md:h-96"></canvas>
         </div>
 
         <!-- Fallback message -->
-        <div id="no-data-message" class="text-gray-600 italic"></div>
+        <div id="no-data-message" class="text-gray-600 italic text-sm sm:text-base"></div>
+
     </div>
 
-
     <script src="js/dashboard.js"></script>
+
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 </body>
