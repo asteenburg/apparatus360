@@ -1,8 +1,31 @@
 {
 	"sections": [
 		{
-			"title": "Coming Soon",
+			"title": "Driver Side",
 			"items": []
+		},
+		{
+			"title": "Compartment 1",
+			"items": ["Portable Pump", "Wheel Chocks x2"]
+		},
+		{
+			"title": "Compartment 2",
+			"items": ["Traffic Cones", "Throw Rope", "Bottled Water"]
+		},
+		{
+			"title": "Passenger Side",
+			"items": []
+		},
+		{
+			"title": "Engine",
+			"items": [
+				"Oil Level",
+				"Coolant Level",
+				"Washer Fluid",
+				"Belts, hoses",
+				"Transmission Fluid",
+				"Battery Condition"
+			]
 		}
 	]
 }

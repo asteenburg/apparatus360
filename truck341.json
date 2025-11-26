@@ -38,8 +38,18 @@
 				"Salvage Covers",
 				"Salvage Equipment",
 				"Smoke Ejector",
-				"Honda Generator",
-				""
+				"Honda Generator"
+			]
+		},
+		{
+			"title": "Engine",
+			"items": [
+				"Oil Level",
+				"Coolant Level",
+				"Washer Fluid",
+				"Belts, hoses",
+				"Transmission Fluid",
+				"Battery Condition"
 			]
 		}
 	]
