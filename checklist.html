@@ -14,30 +14,35 @@
 <body class="bg-gray-100 flex flex-col min-h-screen">
 
 	<!-- Navbar -->
-	<div id="nav-placeholder" class="m-6"></div>
+	<div id="nav-placeholder" class="mx-4 my-4 md:m-6"></div>
 
-	<main class="flex-grow py-12 px-6">
+	<main class="flex-grow py-6 px-4 sm:px-6 md:py-12 md:px-6">
 		<div class="max-w-4xl mx-auto">
-			<!-- Hero Header/Jumbotron -->
-			<section class="mb-8">
-				<div class="bg-white rounded-2xl shadow-2xl text-center p-12 card-glow">
-					<h1 class="md:text-6xl text-2lg font-extrabold uppercase mb-2 text-gray-800">
+
+			<!-- Hero Header -->
+			<section class="mb-6 md:mb-8">
+				<div class="bg-white rounded-2xl shadow-2xl text-center p-6 sm:p-10 md:p-12 card-glow">
+					<h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold uppercase mb-2 text-gray-800">
 						Daily Inspection
 					</h1>
-					<p class="md:text-xl text-lg text-gray-600 mt-2 flex items-center justify-center">
+
+					<p class="text-base sm:text-lg md:text-xl text-gray-600 mt-2 flex items-center justify-center">
 						Mandatory Pre-Trip and Post-Trip Checks
-						<i class="fa-solid fa-truck-moving text-2xl pl-3 text-blue-500"></i>
+						<i class="fa-solid fa-truck-moving text-xl sm:text-2xl pl-3 text-blue-500"></i>
 					</p>
 				</div>
 			</section>
 
-			<section id="checklist-section" class="bg-white rounded-2xl p-8 shadow-xl">
+			<section id="checklist-section" class="bg-white rounded-2xl p-5 sm:p-7 md:p-8 shadow-xl">
 
-				<!-- Tabs container - styled for prominence -->
-				<div class="mb-6 border-b pb-4">
-					<h2 class="text-lg font-bold text-gray-700 mb-2 uppercase">Select Vehicle</h2>
-					<div id="truck-tabs" class="flex flex-wrap gap-3">
-						<!-- Tabs will be populated here by js/app.js -->
+				<!-- Tabs -->
+				<div class="mb-4 sm:mb-6 border-b pb-3 sm:pb-4">
+					<h2 class="text-base sm:text-lg font-bold text-gray-700 mb-2 uppercase">
+						Select Vehicle
+					</h2>
+
+					<div id="truck-tabs" class="flex flex-wrap gap-2 sm:gap-3">
+						<!-- JS generated -->
 					</div>
 				</div>
 
@@ -45,55 +50,66 @@
 				<form id="checklist-form">
 					<input type="hidden" id="truck-number-input" name="truck-number">
 
-					<!-- Inspector Details & Actions Card -->
-					<div class="bg-gray-50 p-6 rounded-xl border border-gray-200 mb-6">
+					<!-- Inspector Card -->
+					<div class="bg-gray-50 p-4 sm:p-5 md:p-6 rounded-xl border border-gray-200 mb-6">
+						
 						<!-- Inspector Name -->
 						<div class="mb-4">
-							<label for="inspector-name" class="block text-gray-800 font-bold mb-2">
+							<label for="inspector-name" class="block text-gray-800 font-bold mb-1 sm:mb-2">
 								<i class="fa-solid fa-user-check pr-2"></i>
-								Inspector Name <span class="text-red-500">*</span>:
+								Inspector Name <span class="text-red-500">*</span>
 							</label>
 							<input type="text" id="inspector-name" name="inspector-name" required
-								class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-4 focus:ring-blue-100"
+								class="w-full border border-gray-300 rounded-lg px-3 py-2 sm:px-4 sm:py-2 
+								focus:outline-none focus:ring-4 focus:ring-blue-100"
 								placeholder="Enter your full name or ID">
 						</div>
 
-						<!-- Select All Button -->
-						<div class="flex items-center justify-between pt-4 border-t border-gray-200">
-							<h2 class="text-xl font-bold text-gray-800 flex items-center">
+						<!-- Select All -->
+						<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pt-4 border-t border-gray-200">
+							<h2 class="text-lg sm:text-xl font-bold text-gray-800 flex items-center">
 								<i class="fa-solid fa-list-check pr-3"></i>
 								Items to Inspect
 							</h2>
+
 							<button id="select-all-btn" type="button"
-								class="px-5 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition transform hover:scale-105 shadow-md">
+								class="px-4 py-2 sm:px-5 bg-green-600 text-white font-semibold rounded-lg
+								hover:bg-green-700 transition transform hover:scale-105 shadow-md">
 								<i class="fa-solid fa-check-double mr-2"></i>
 								Check All
 							</button>
 						</div>
 					</div>
 
-					<!-- Checklist Container -->
-					<div id="checklist-container" class="space-y-6">
-						<!-- Checklist items populated by JS will go here -->
+					<!-- Checklist Items -->
+					<div id="checklist-container" class="space-y-4 sm:space-y-6">
+						<!-- JS inserts items -->
 					</div>
 
 					<!-- Action Buttons -->
-					<div class="mt-8 flex flex-wrap gap-4 pt-6 border-t border-gray-200">
+					<div class="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-5 sm:pt-6 border-t border-gray-200">
+						
 						<button type="submit"
-							class="flex-1 min-w-[150px] px-6 py-3 bg-red-600 text-white font-bold uppercase rounded-xl hover:bg-red-700 transition transform hover:scale-[1.01] shadow-lg">
+							class="w-full sm:flex-1 px-6 py-3 bg-red-600 text-white font-bold uppercase rounded-xl 
+							hover:bg-red-700 transition transform hover:scale-[1.01] shadow-lg">
 							<i class="fa-solid fa-floppy-disk mr-2"></i>
 							Submit Inspection
 						</button>
+
 						<button type="reset"
-							class="flex-1 min-w-[150px] px-6 py-3 bg-gray-500 text-white font-bold uppercase rounded-xl hover:bg-gray-600 transition shadow-md">
+							class="w-full sm:flex-1 px-6 py-3 bg-gray-500 text-white font-bold uppercase rounded-xl
+							hover:bg-gray-600 transition shadow-md">
 							<i class="fa-solid fa-rotate-left mr-2"></i>
 							Reset Form
 						</button>
+
 						<button type="button" id="export-pdf"
-							class="flex-1 min-w-[150px] px-6 py-3 bg-blue-600 text-white font-bold uppercase rounded-xl hover:bg-blue-700 transition shadow-lg">
+							class="w-full sm:flex-1 px-6 py-3 bg-blue-600 text-white font-bold uppercase rounded-xl 
+							hover:bg-blue-700 transition shadow-lg">
 							<i class="fa-solid fa-file-pdf mr-2"></i>
 							Export PDF
 						</button>
+
 					</div>
 				</form>
 
@@ -101,7 +117,7 @@
 		</div>
 	</main>
 
-	<!-- Footer Placeholder -->
+	<!-- Footer -->
 	<div id="footer-placeholder"></div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
